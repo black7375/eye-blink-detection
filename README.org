@@ -1,0 +1,20 @@
+* EYE Blink Detection
+
+Fork from [[https://www.educative.io/edpresso/eye-blink-detection-using-opencv-python-and-dlib][Eye Blink detection using OpenCV, Python, and Dlib]].
+
+This project use [[https://github.com/pyenv/pyenv][pyenv]] & [[https://github.com/pypa/pipenv][pipenv]].\\
+Setup with next script.
+#+BEGIN_SRC shell
+pyenv local && pipenv install
+#+END_SRC
+
+And then, run like this.
+#+BEGIN_SRC shell
+# If live video
+pipenv run python main.py --shape-predictor shape_predictor_68_face_landmarks.dat
+
+# If video file
+pypenv run python main.py --shape-predictor shape_predictor_68_face_landmarks.dat --video <CUSTOM_VIDEO_PATH>
+#+END_SRC
+
+=shape_predictor_68_face_landmarks.dat= can be download from [[http://dlib.net/files/][dlib.net]] or [[https://sourceforge.net/projects/dclib/files/dlib/v18.10/][sourceforge]].
